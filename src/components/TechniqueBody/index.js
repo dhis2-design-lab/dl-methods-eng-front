@@ -77,7 +77,7 @@ export default function TechniqieBody({limit = null}) {
                   <div className="card__header">
                       <span className="card__header-text">Technique</span>
                   </div>
-                  <div className={viewConfig === "grid" ?"card__body--grid" : "card__body"}>
+                  <div className={viewConfig === "grid" ?"card__body--grid" : "card__body--list"}>
                       <h5 className="card__title">
                           {title}
                       </h5>
@@ -89,9 +89,11 @@ export default function TechniqieBody({limit = null}) {
                         />
                   </div>
                   <div className="card__footer">
-                    <NavLink to={`/techniques/writing/${hyphenetedTitle}`} className="link" onClick={()=>localStorage.setItem("techniquesId", id)}>
-                      explore more
-                    </NavLink>
+                    <div style={{padding: '1em 0'}}>
+                      <NavLink to={`/techniques/writing/${hyphenetedTitle}`} className="link__list" onClick={()=>localStorage.setItem("techniquesId", id)}>
+                        explore more
+                      </NavLink>
+                    </div>
                   </div>
               </div>
           </div>

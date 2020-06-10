@@ -67,6 +67,10 @@ body {
     max-height: 11em;
     min-height: 11em;
     overflow: hidden; }
+  .card__body--list {
+    max-height: 9em;
+    min-height: 9em;
+    overflow: hidden; }
   .card__list .card__header {
     font-weight: 300 !important; }
   .card__list .card__title {
@@ -90,6 +94,13 @@ body {
 
 .card:hover {
   box-shadow: 0 0 19px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer; }
+
+.card:hover .link__list {
+  background: #2e68d4;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #ffffff;
   cursor: pointer; }
 
 .image {
@@ -215,20 +226,35 @@ body {
   .grid__col {
     grid-column: span auto; }
 
+.link {
+  text-decoration: none;
+  border-bottom: solid #2e68d4;
+  color: #2e68d4;
+  cursor: pointer; }
+  .link__list {
+    color: #2e68d4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer; }
+  .link__list-active {
+    background: #2e68d4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #ffffff;
+    cursor: pointer; }
+  .link__list:hover {
+    background: #2e68d4;
+    color: #ffffff; }
+
+.link:hover {
+  background: #2e68d4;
+  color: #fafafa; }
+
 .header {
   padding: .5rem 1rem; }
   .header__nav-item {
     padding: 1em 0.5em;
     text-align: center; }
-
-.link {
-  text-decoration: none;
-  border-bottom: solid #2e68d4;
-  color: #2e68d4; }
-
-.link:hover {
-  background: #2e68d4;
-  color: #fafafa; }
 
 .toc {
   list-style: none;
